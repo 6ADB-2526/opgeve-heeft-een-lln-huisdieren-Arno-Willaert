@@ -13,6 +13,7 @@
   <body class="bg-light py-5">
     <div class="container">
       <h3 class="mb-4">Heeft een persoon huisdieren</h3>
+      <h1 id="welkom" class="mb-4"></h1>
 
       <form id="myForm" class="card p-4 shadow-sm" novalidate>
         <!-- Selectbox -->
@@ -27,33 +28,17 @@
           <div class="invalid-feedback">Kies een naam.</div>
         </div>
 
-        <!-- Checkbox onder de select -->
+        <!-- Checkbox -->
         <div class="form-check mb-3">
-          <input
-            class="form-check-input"
-            type="checkbox"
-            value=""
-            id="heeftHuisdieren"
-          />
-          <label class="form-check-label" for="extraCheck">
+          <input class="form-check-input" type="checkbox" id="heeftHuisdieren" />
+          <label class="form-check-label" for="heeftHuisdieren">
             Ik heb huisdieren
           </label>
         </div>
 
-        <!-- Invulveld (verstopt tot checkbox aan) -->
-        <div id="naamHuisdierWrap" class="mb-3 visually-hidden">
-          <label for="naamHuisdier" class="form-label"
-            >Naam van het huisdier</label
-          >
-          <input
-            type="text"
-            id="naamHuisdier"
-            class="form-control"
-            placeholder="Vul de naam van het huisdier in"
-          />
-          <div class="invalid-feedback">
-            Vul de extra informatie in of haal de checkbox weg.
-          </div>
+        <!-- Container voor huisdier-invulvelden -->
+        <div id="dierenContainer" class="mb-3 visually-hidden">
+          <label class="form-label">Naam van het huisdier(en)</label>
         </div>
 
         <div class="d-flex gap-2">
@@ -62,8 +47,8 @@
         </div>
       </form>
     </div>
-
-    <!-- Bootstrap JS + kleine custom script -->
+    <script src="./script/script.js"></script>
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
